@@ -68,12 +68,20 @@ Both training and inference were run on CPU.
 
 # Running the Code
 
-Main script for training and inference: `python scripts/run_train_inference.py`
+## Using test data from the competition
 
-Train and infer across multiple model/data specs: `python scripts/run_specifications.py`
+Run the code scripts in the following order:
 
-Run inference on counterfactual datasets: `python scripts/run_specifications.py`
+1. Main script for training and inference for the submission: `python scripts/run_train_inference.py`
 
-Run inference on new test data: `python scripts/run_inference.py`
+2. Train and infer across multiple model/data specs that were used in the report: `python scripts/run_specifications.py`
+
+3. Create datasets for counterfactual evaluation: `python scripts/create_confact.py`
+
+4. Run inference on counterfactual datasets: `python scripts/run_specifications.py`
+
+## Using new test data
+
+To run the inference on the new test data rerun `python scripts/run_train_inference.py` for training and then use `python scripts/run_inference.py` for inference.
 
 You can download the trained models, predictions, and preprocessed datasets from the `data`, `models`, and `output` folders using the following Google Drive link: https://drive.google.com/drive/folders/1b81I9KfZ0OqDw_5zCmxOakA909v8xoK8?usp=drive_link
